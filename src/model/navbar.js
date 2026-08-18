@@ -23,4 +23,6 @@ export function navBar(event) {
     "rounded-[0.5em]",
     "scale-100",
   );
+
+  //
 }
