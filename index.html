@@ -2,12 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/view/style.css" />
     <title>simple-tabs</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="font-mono">
+    <main
+      class="overall-container h-screen flex flex-col justify-center items-center gap-4 mt-4"
+    >
+      <!-- BUTTON CONTAINER -->
+      <div
+        id="button-container"
+        class="flex gap-1.5 bg-gray-300 text-base rounded-[0.5em]"
+      >
+        <button
+          aria-label="tab1"
+          type="button"
+          class="bg-blue-700 text-white p-2 rounded-[0.5em] lg:cursor-pointer"
+        >
+          Tab 1
+        </button>
+        <button aria-label="tab2" type="button" class="p-2 lg:cursor-pointer">
+          Tab 2
+        </button>
+        <button aria-label="tab3" type="button" class="p-2 lg:cursor-pointer">
+          Tab 3
+        </button>
+      </div>
+
+      <!-- CONTENT CONTAINERS -->
+      <div class="border p-8 rounded-xl">
+        <div>Tab 1 Content</div>
+        <div class="hidden">Tab 2 Content</div>
+        <div class="hidden">Tab 3 Content</div>
+      </div>
+    </main>
     <script type="module" src="/src/controller/main.js"></script>
   </body>
 </html>
