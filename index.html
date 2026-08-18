@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/" />
+    <link rel="icon" type="image/png" href="/src/assets/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/view/style.css" />
     <title>simple-tabs</title>
@@ -19,23 +19,34 @@
         <button
           aria-label="tab1"
           type="button"
-          class="bg-blue-700 text-white p-2 rounded-[0.5em] lg:cursor-pointer"
+          id="tab1"
+          class="active bg-blue-700 text-white p-2 rounded-[0.5em] scale-100 transition-transform duration-300 lg:cursor-pointer"
         >
           Tab 1
         </button>
-        <button aria-label="tab2" type="button" class="p-2 lg:cursor-pointer">
+        <button
+          aria-label="tab2"
+          type="button"
+          id="tab2"
+          class="p-2 lg:cursor-pointer"
+        >
           Tab 2
         </button>
-        <button aria-label="tab3" type="button" class="p-2 lg:cursor-pointer">
+        <button
+          aria-label="tab3"
+          type="button"
+          id="tab3"
+          class="p-2 lg:cursor-pointer"
+        >
           Tab 3
         </button>
       </div>
 
       <!-- CONTENT CONTAINERS -->
-      <div class="border p-8 rounded-xl">
-        <div>Tab 1 Content</div>
-        <div class="hidden">Tab 2 Content</div>
-        <div class="hidden">Tab 3 Content</div>
+      <div class="tab-content-container border p-8 rounded-xl">
+        <div id="tab1-content" class="tab">Tab 1 Content</div>
+        <div id="tab2-content" class="tab">Tab 2 Content</div>
+        <div id="tab3-content" class="tab">Tab 3 Content</div>
       </div>
     </main>
     <script type="module" src="/src/controller/main.js"></script>
